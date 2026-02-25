@@ -1,0 +1,101 @@
+* {
+  transition: all 0.25s ease-in-out;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+select, input {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card.unavailable {
+  opacity: 0.6;
+}
+
+button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.loader {
+  font-size: 18px;
+}
+
+.no-data {
+  color: gray;
+  font-size: 18px;
+}
+
+.theme-toggle {
+  background: black;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* 🌙 Dark Theme */
+
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+body.dark select,
+body.dark input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark button {
+  background: #ff4d6d;
+}
+
+body.dark .theme-toggle {
+  background: white;
+  color: black;
+}
